@@ -5,5 +5,4 @@ module ApplicationHelper
     signed_in_as_admin?
   end
   
-  
 end
