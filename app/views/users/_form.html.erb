@@ -1,0 +1,22 @@
+<%= form.error_messages %>
+<div id="user_form">
+<div class="text_field">
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+</div>
+<div class="password_field">
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+</div>
+<div class="password_field">
+  <%= form.label :password_confirmation, "Verify password" %>
+  <%= form.password_field :password_confirmation %>
+</div>
+
+<% if show_admin_content? %>
+  <div class="checkbox_field">
+    <%= form.check_box :admin %>
+    <%= form.label :admin, "Admin" %>
+  </div>
+<% end %>
+</div>
