@@ -16,10 +16,10 @@ class UsersController < ApplicationController
   end
   
   def update
-    if current_user.admin? && params[:user][:admin] && params[:user][:admin] == "1"
+    if signed_in_as_admin? && params[:user][:admin] && params[:user][:admin] == "1"
       @user.admin = true
       @user.save
-    elsif current_user.admin?
+    elsif signed_in_as_admin?
       @user.admin = false
       @user.save
     end
