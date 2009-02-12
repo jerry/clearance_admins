@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password"). 
   filter_parameter_logging :password
   
+  helper_method :signed_in_as_admin?
+  
   def signed_in_as_admin?
     signed_in? && current_user.admin?
   end
