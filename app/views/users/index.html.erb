@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Confirmed Email?</th>
+  <tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= link_to user.email, user_path(user) %></td>
+      <td><%= user.email_confirmed %></td>
+    </tr>
+  <% end %>
+</table>
+    
