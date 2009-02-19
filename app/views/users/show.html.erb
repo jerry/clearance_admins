@@ -1,0 +1,8 @@
+<h1><%= mail_to @user.email if signed_in? %></h1>
+
+<% if show_admin_content? %>
+  <div id="control_block">
+    <%= link_to "Edit", edit_user_path(@user) %>
+    <%= link_to "Users", users_path %>
+  </div>
+<% end %>

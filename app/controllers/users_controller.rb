@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   include Clearance::App::Controllers::UsersController
   
-  before_filter :admin_only, :only => [ :index ]
+  before_filter :admin_only, :only => [ :index, :show ]
   before_filter :get_user, :only => [ :edit, :update ]
   
   def index
